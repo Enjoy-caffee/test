@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Playpen+Sans+Arabic:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&family=Playpen+Sans+Arabic:wght@100..800&display=swap');
+
+:root {
+    --main-color: #502145;
+    --shadow-color: #7a4a6d;
+    --second-color: #f6f2f4;
+    --third-color: #d8cfc4;
+    --fourth-color: #c9a24d;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: cairo;
+    direction: rtl;
+background-color: var(--main-color);
+
+
+}
+a {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+    .contanier {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .contanier {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .contanier {
+        width: 1170px;
+    }
+}
+header {
+    background-color: var(--main-color);
+    height: 60px;
+    border-bottom: 1px solid var(--third-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(135deg, #502145, rgba(255, 255, 255, 0.2));
+    
+}
+
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    align-items: center;
+}
+
+header .container a:first-child img { 
+    height: 59px;
+    
+}
+
+.change-color {
+    
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    right:  0;
+    z-index: -10;
+    animation: header-color 10s ease infinite;
+    background: linear-gradient(65deg, rgba(255, 255, 255, 0.2), #502145);
+}
+
+@keyframes header-color {
+    0% {width: 0px;}
+    50% {width: 100%;}
+    100% {width: 0px;}
+}
+header .container .social {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .container .social i {
+    margin: 0 7px;
+    font-size: 17px;
+    display: flex;
+    width: 35px;
+    height: 35px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 3px 5px var(--shadow-color);
+    transform: translateY(-3px);
+}
+
+.face {
+    background-color: #0866ff;
+}
+.whats {
+    background-color: #25d366;
+}
+.insta {
+    background-color: #c81e4d;
+}
+.tiktok {
+    background-color: black;
+}
+.container .social i:hover {
+    scale: 1.1;
+}
+
+/*end header style*/
+.head {
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+position: relative;
+border-bottom: 1px solid white;
+background-color: var(--second-color);
+}
+
+.head h1 {
+    color: var(--main-color);
+    font-size: 35px;
+    font-size: 900;
+}
+@media (max-width: 768px) {
+    .head h1 {
+        font-size: 30px;
+        padding-top: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .head p:first-of-type {
+       font-size: 30px; 
+    }
+}
+.head p:first-of-type {
+    color: var(--main-color);
+    font-size: 35px;
+    font-size: 900;
+    font-weight: bold;
+}
+.head p:last-child {
+    font-size: 20px; 
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+
+.types {
+    padding: 30px 10px;
+    text-align: center;
+}
+.type {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid var(--shadow-color);
+    background-color: var(--second-color);
+    height: 100px;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 30px;
+    box-shadow: 0 0 3px 5px var(--shadow-color);
+}
+.types .type img {
+    width: 100px;
+    height: 100px;
+}
+.types .type h2 {
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--main-color);
+}
+.types .type p {
+    padding-left: 10px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    margin: 5px;
+    padding-right: 10px;
+    font-size: 15px;
+    font-weight: 800;
+    color: white;
+}
+.types a {
+    text-decoration: none;
+    box-shadow: 0 0 10px white;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    transition: 0.5s;
+}
+.types a:hover {
+    box-shadow: 0 0 20px 5px var(--shadow-color);
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
